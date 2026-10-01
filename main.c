@@ -11,13 +11,10 @@ int main(void)
 
     //판단부분 if-else
     if (num > 0)                  //첫번째는 쉬운거
-        printf("Positive!\n");
+        printf("Absolute value : %d\n", num);
     
-    else if (num < 0)
-        printf("Negative!\n");
-    
-    else
-        printf("Zero!\n");
+    else //음수또는 0
+        printf("Absolute value : %d\n", -num);
     
 
     return 0;
