@@ -2,22 +2,26 @@
 
 int main(void)
 {
-    int answer = 59;
-    int input;
-    int trial = 0;
+    int num1,num2;
+    char op;
+    int res;
 
-    do{
-        printf("Guessa number:");
-        scanf("%i", &input);
-        if (answer < input)
-            printf("high!\n");
-        else if (answer > input)
-            printf("low!\n");
+    printf("Input the calculation:");
+    scanf("%i%c%i",&num1,&op,&num2);
+
+    if (op == '+')
+        res = num1 + num2;
+
+    else if (op == '-')
+        res = num1 - num2;
+
+    else if (op == '*')
+        res = num1 * num2;
         
-        trial++;
-    } while (answer != input);
+    else if (op == '/')
+        res = num1 / num2;
 
-    printf("Congratulation! trial:%i", trial);
+    printf("= %i\n", res);
 
     return 0;
 }
