@@ -3,19 +3,17 @@
 int main(void)
 {
     //변수선언
-    int num;
+    int count = 0;          //숫자 문자 개수를 세는 변수
+    char c;             //문자를 저장하는 변수
 
-    //정수 입력받음
-    printf("Input an integer : "); //한글 넣으면 간혹 깨지기도 함.
-    scanf("%d", &num); //%i 가능
+    printf("Input a string: ");
+    //판단부분 while문
+    while ( ( c = getchar() ) != '\n' ) //getchar():글자를 하나 입력 받는 함수,, scanf,printf처럼 stdio.h안에 들어 있는 라이브러리
+    {   if (c >= '0' && c <= '9')
+            count++;
 
-    //판단부분 if-else
-    if (num > 0)                  //첫번째는 쉬운거
-        printf("Absolute value : %d\n", num);
-    
-    else //음수또는 0
-        printf("Absolute value : %d\n", -num);
-    
+    }
+    printf("The number of digits is %d", count);
 
     return 0;
 }
